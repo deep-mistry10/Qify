@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"Organization",
+ "name":"QIFY",
+ "url":"https://qify.site/",
+ "logo":"https://qify.site/images/logo.png"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100;400;600;700&display=swap" rel="stylesheet">
+<meta property="og:title" content="QIFY - Free QR Code Generator">
+<meta property="og:description" content="Generate QR codes for UPI, WiFi, URLs and more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://qify.site/">
+<meta property="og:image" content="https://qify.site/images/preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<script src="https://unpkg.com/qr-code-styling/lib/qr-code-styling.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600&display=swap" rel="stylesheet">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qify – Free QR Code Generator</title>
+<meta name="description" content="Generate QR codes for UPI, WiFi, URLs and more. Fast & free QR generator.">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">QIFY</div>
+  <div class="navigator-bar"><nav>
+    <a href="pages/about.html">About</a>
+    <a href="pages/topics.html">Topics</a>
+    <a href="pages/contact.html">Contact</a>
+    <a href="pages/terms.html">Terms</a>
+  </nav>
+  </div>
+</header>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<section class="hero">
+  <h1 class="heading">Free QR Code Generator for URLs, UPI, WiFi & More</h1>
+  <p class="para">
+    Create Dynamic qr code easily. you can create various qr code like 
+    URL, Text, Mobile Number, Email, Contact, WiFi Password and even UPI 
+    to QR Code. you can create dynamic upi QR code By Amount, name and 
+    UPI ID. you can scan that qr code using any app or Google Lens and 
+    you can scan and pay using that dynamic UPI QR Code. 100% free 
+  </p>
+</section>
+
+<div class="ads">Ad Space</div>
+
+<!-- QR TYPE BUTTONS -->
+<nav class="tabs">
+<button onclick="showForm('url')">URL</button>
+<button onclick="showForm('text')">Text</button>
+<button onclick="showForm('phone')">Mobile</button>
+<button onclick="showForm('email')">Email</button>
+<button onclick="showForm('contact')">Contact</button>
+<button onclick="showForm('wifi')">WiFi</button>
+<button onclick="showForm('upi')">UPI</button>
+</nav>
+
+
+<section id="form-container">
+
+<div class="form" id="url-form">
+<input type="url" id="urlInput" placeholder="Enter URL">
+<p id="urlError" class="error-msg"></p>
+<button onclick="generateQR('url')">Generate QR</button>
+</div>
+
+<div class="form" id="text-form" style="display:none;">
+<textarea id="textInput" placeholder="Enter text"></textarea>
+<button onclick="generateQR('text')">Generate QR</button>
+</div>
+
+<div class="form" id="phone-form" style="display:none;">
+<input type="text" id="phoneName" placeholder="Name">
+<input type="text" id="phoneNumber" placeholder="Mobile Number">
+<button onclick="generateQR('phone')">Generate QR</button>
+</div>
+
+<div class="form" id="email-form" style="display:none;">
+<input type="text" id="emailInput" placeholder="Email">
+<button onclick="generateQR('email')">Generate QR</button>
+</div>
+
+<div class="form" id="contact-form" style="display:none;">
+<input type="text" id="contactName" placeholder="Name">
+<input type="text" id="contactPhone" placeholder="Phone">
+<input type="text" id="contactEmail" placeholder="Email">
+<button onclick="generateQR('contact')">Generate QR</button>
+</div>
+
+<div class="form" id="wifi-form" style="display:none;">
+<input type="text" id="wifiSSID" placeholder="WiFi Name (SSID)">
+<select id="wifiSecurity" onchange="togglePasswordField()">
+<option value="WPA">WPA / WPA2 / WPA3</option>
+<option value="WEP">WEP</option>
+<option value="nopass">No Password</option>
+</select>
+<input type="text" id="wifiPassword" placeholder="WiFi Password">
+<div class="wifi-hidden">
+<label>Hidden Network</label>
+<input type="checkbox" id="wifiHidden">
+</div>
+<button onclick="generateQR('wifi')">Generate QR</button>
+</div>
+
+<div class="form" id="upi-form" style="display:none;">
+<input id="upiName" placeholder="Name">
+<input id="upiId" placeholder="UPI ID">
+<input id="upiAmount" placeholder="Amount (₹)">
+<button onclick="generateQR('upi')">Generate QR</button>
+</div>
+
+</section>
+
+<section id="qrcode-container">
+<div id="qrcode"></div>
+
+<div id="card" class="card" style="display:none;">
+<div class="header" id="cardName">MERCHANT NAME</div>
+<div id="qr"></div>
+  <div class="upi-text" id="cardUpi">merchant@upi</div>
+
+  <div class="desc">Scan and pay with any BHIM UPI app</div>
+
+  <div class="logos-big">
+    <img src="images/BHIM.svg">
+    <img src="images/UPI.svg">
+  </div>
+
+  <div class="logos-small">
+    <img src="images/gpay.svg">
+    <img src="images/Phonepe.svg">
+    <img src="images/Paytm.svg">
+    <img src="images/Amazon_pay.svg">
+  </div>
+
+  <div class="message"><p>Create your own UPI QR code for free using</p> <div class="QIFY"><p>Qify.site</p></div></div>
+</div>
+<button id="downloadBtn" style="display:none;" onclick="downloadQR()">Download QR</button>
+<span id="loadingText" style="display:none;">Downloading...</span>
+</section>
+
+
+
+<div class="ads">Ad Space</div>
+
+<section class="faq">
+  <h2 class="headeri">Frequently Asked Questions</h2>
+  <strong class="aalukalu">What is a QR Code?</strong>
+    <br>
+    <br>
+    <p class="paraqw">A QR code, short for quick-response code,
+    is a type of two-dimensional matrix barcode invented in 1994 by Masahiro Hara of the Japanese 
+    company Denso Wave for labelling automobile parts. It features white and black squares within 
+    a square grid featuring fiducial markers on the corners, readable by imaging devices like cameras, 
+    and processed using Reed–Solomon error correction until the image can be appropriately interpreted. 
+    The required data is then extracted from patterns that are present in both the horizontal and the 
+    vertical components of the QR image.[4] Whereas a barcode is a machine-readable optical image that 
+    contains information specific to the labeled item, the QR code contains the data for a locator, an 
+    identifier, and web tracking. To store data efficiently, QR codes use four standardized modes of 
+    encoding: numeric, alphanumeric, byte or binary, and kanji.Compared to standard UPC barcodes, t
+    he QR labeling system was applied beyond the automobile industry because of faster reading of the 
+    optical image and greater data-storage capacity in applications such as product tracking, item 
+    identification, time tracking, document management, and general marketing.
+    </p>
+    <br>
+    <br>
+  <strong class="paraqw">What is a Dynamic UPI QR Code?</strong>
+  <br> 
+  <br>
+  <p class="paraqw">Unlike a standard sticker, a dynamic UPI 
+    QR code is generated specifically for one transaction. It 
+    often includes a pre-set amount and transaction ID, so the customer 
+    doesn't have to type the amount manually.
+  </p>
+  <br>
+  <br>
+  <strong class="paraqw">What is the difference between Static and Dynamic QR codes?</strong>
+  <br>
+  <br>
+  <p class="paraqw">Static QR codes have fixed information that cannot 
+    be changed once printed. Dynamic QR codes use a redirect link, 
+    allowing you to change the destination (like a website URL) without 
+    reprinting the actual code.
+  </p>
+  <br>
+  <br>
+  <strong class="paraqw">Do I need to enter my PIN to receive money?</strong>
+  <br>
+  <br>
+  <p class="paraqw">No. This is a common scam. You never need to scan 
+    a QR code or enter your UPI PIN to receive money; these actions are 
+    only for sending money.
+  </p>
+  <br>
+  <br>
+   <strong class="paraqw">Data Privacy & Security</strong>
+  <br>
+  <br>
+  <p class="paraqw">Your sensitive data, including UPI address, 
+    bank account number, mobile number, or any other sensitive data is 
+    never stored on our servers. In fact we dont have any servers. All 
+    information stays in your 
+    browser’s local storage and is only used to generate the QR 
+    code image. We take your privacy seriously.</p>
+  <br>
+  <br>
+  <strong class="paraqw">Important Disclaimer</strong>
+  <br>
+  <br>
+  <p class="paraqw">This app is designed to help user merchants 
+    and businesses create any type QR codes with custom URLs, Text,
+     Mobile Number, Email, Wifi Password and UPI . It
+     is not an official application and has no affiliation with 
+     any bank, BHIM UPI, NPCI (National Payments Corporation of 
+     India), or other financial institutions.
+     The logos of Amazon Pay, PhonePe, Paytm, Google Pay, WhatsApp Pay,
+     and BHIM UPI are trademarks of their respective owners and are
+     displayed for informational and educational purposes only.
+  <br><br>
+     Made with ❤️ for Users, shop Owner and Cybercafe owners
+  <br>
+  <br>
+
+
+
+</section>
+
+
+<div class="ads">Ad Space</div>
+
+
+<footer class="site-footer">
+<p class="lastline">© 2025 QIFY | Created by Deep Mistry</p>
+<div class="links">
+<a href="pages/about.html">About</a> |
+<a href="pages/contact.html">Contact</a> |
+<a href="pages/privacy-policy.html">Privacy</a> |
+<a href="pages/terms.html">Terms</a> |
+<a href="pages/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
