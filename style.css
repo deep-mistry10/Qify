@@ -22,6 +22,9 @@ header {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0,0,0,0.06);
   gap: 40px;
+  position:sticky;
+top:0;
+z-index:100;
 }
 
 .heading {
@@ -48,7 +51,6 @@ nav a:hover {
   color: rgb(167, 166, 166);
 }
 
-/* HERO */
 .hero {
   padding: 40px 20px;
   color: #1e3a5f;
@@ -64,28 +66,11 @@ nav a:hover {
   color: #1e293b;
 }
 
-/* ADS */
-.ads {
-  margin: 20px auto;
-  width: 90%;
-  height: 80px;
-  border: 1px dashed #475569;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #1e293b;
-}
-
-/* QR TYPES */
-.qr-types {
-  margin: 20px;
-}
-
 .qr-types button {
   margin: 5px;
   padding: 8px 12px;
   border: none;
-  background: #1e293b;
+  background: #e2e8f0;
   color: #1e293b;
   cursor: pointer;
   border-radius: 6px;
@@ -95,10 +80,6 @@ nav a:hover {
   color: #1e293b;
 }
 
-/* INPUT */
-.generator {
-  margin: 20px;
-}
 
 .generator input {
   width: 60%;
@@ -107,21 +88,6 @@ nav a:hover {
   border-radius: 6px;
 }
 
-.generate-btn {
-  padding: 10px 15px;
-  margin-left: 10px;
-  background: #3b82f6;
-  border: none;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.generate-btn:hover {
-  background: #2563eb;
-}
-
-/* FAQ */
 .faq {
   margin: 40px 20px;
   color: #1e293b;
@@ -132,20 +98,57 @@ nav a:hover {
 }
 
 .faq p {
-  margin-bottom: 10px;
   color: #1e293b;
 }
 
-/* FOOTER */
-footer {
-  padding: 20px;
-  background: #020617;
+.site-footer{
+  margin-top:60px;
+
+  padding:35px 20px;
+
+  text-align:center;
+
+  background:
+  rgba(255,255,255,0.45);
+
+  backdrop-filter:blur(10px);
+
+  border-top:
+  1px solid rgba(0,0,0,0.06);
 }
 
-.footer-links a {
-  margin: 0 8px;
-  color: #94a3b8;
-  text-decoration: none;
+.lastline{
+  color:#475569;
+
+  margin-bottom:14px;
+
+  font-size:15px;
+}
+
+.links{
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:10px;
+
+  color:#64748b;
+}
+
+.links a{
+  text-decoration:none;
+
+  color:#475569;
+
+  font-size:14px;
+
+  transition:0.25s ease;
+}
+
+.links a:hover{
+  color:#9e9e9e;
 }
 
 .navigator-bar nav {
@@ -225,7 +228,7 @@ button:hover {
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* QR Code */
+
 #qrcode-container {
   margin-top: 25px;
   text-align: center;
@@ -244,8 +247,6 @@ button:hover {
   justify-content: center;
   gap: 8px;
 }
-
-
 
 #qrcode img {
   border: 2px solid #000;
@@ -287,7 +288,6 @@ button:hover {
   align-items: center;
   gap: 10px;
 }
-
 
 #qr{
   width:220px;
@@ -387,8 +387,8 @@ a {
     width: 100%; 
     font-family: sans-serif;
     text-align: left; 
-    margin-top:20px ;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .headeri {
@@ -469,26 +469,105 @@ strong{
   font-weight:700;
 }
 
-.lastline {
-  color: #ccc;
-}
-
-.links {
-  color: #dbe3ee;
-}
-
-h7 {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.site-footer{
-  padding:20px 20px;
-}
-.links a{
-  margin:0 8px;
+.mini-heading{
+  font-size:20px;
+  font-weight:bold;
 }
 
 p{
   line-height:1.8;
 }
+
+.privacy-popup{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.7);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:99999;
+  isolation:isolate;
+}
+.privacy-popup{
+  transition:0.3s ease;
+}
+
+.privacy-box{
+  background:#111;
+  color:white;
+  width:90%;
+  max-width:420px;
+  padding:25px;
+  border-radius:18px;
+  text-align:center;
+  font-family:Inter,sans-serif;
+}
+
+.privacy-box h2{
+  margin-bottom:10px;
+}
+
+.privacy-box p{
+  font-size:14px;
+  line-height:1.6;
+  color:#ccc;
+}
+
+.privacy-buttons{
+  margin-top:20px;
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  align-items:center;
+}
+
+.privacy-buttons button{
+  padding:10px 20px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.privacy-buttons a{
+  color:#4da6ff;
+  text-decoration:none;
+}
+
+.site-footer{
+  margin-top:60px;
+  padding:20px 20px;
+  text-align:center;
+  background:
+  rgba(255,255,255,0.45);
+  backdrop-filter:blur(10px);
+  border-top:
+  1px solid rgba(0,0,0,0.06);
+}
+
+.lastline{
+  color:#475569;
+  margin-bottom:14px;
+  font-size:15px;
+}
+
+.links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  color:#64748b;
+}
+
+.links a{
+  text-decoration:none;
+  color:#475569;
+  font-size:14px;
+  transition:0.25s ease;
+  margin: 0 8px;
+}
+
+.links a:hover{
+  color:#7c3aed;
+}
+

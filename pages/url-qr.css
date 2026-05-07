@@ -1,0 +1,180 @@
+.url-page{
+  max-width:1000px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+.url-box{
+
+  background:
+  rgba(255,255,255,0.6);
+
+  backdrop-filter:blur(12px);
+
+  border-radius:24px;
+
+  padding:40px;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.06);
+}
+
+.url-tag{
+
+  display:inline-block;
+
+  padding:8px 16px;
+
+  border-radius:999px;
+
+  background:#dcfce7;
+
+  color:#16a34a;
+
+  font-size:14px;
+
+  font-weight:700;
+
+  margin-bottom:20px;
+}
+
+.url-title{
+  font-size:42px;
+  margin-bottom:20px;
+  color:#0f172a;
+}
+
+.url-desc{
+  color:#475569;
+  line-height:1.8;
+  margin-bottom:35px;
+  font-size:17px;
+}
+
+.url-card{
+
+  background:
+  rgba(255,255,255,0.5);
+
+  border-radius:20px;
+
+  padding:28px;
+
+  margin-bottom:24px;
+}
+
+.url-card h2{
+  margin-bottom:14px;
+  color:#1e293b;
+}
+
+.url-card p{
+  color:#475569;
+  line-height:1.8;
+  margin-bottom:12px;
+}
+
+.url-image-box{
+  text-align:center;
+  margin-top:35px;
+}
+
+.url-image{
+  width:300px;
+  max-width:420px;
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.1);
+}
+
+@media(max-width:768px){
+
+.url-title{
+  font-size:32px;
+}
+
+.url-box{
+  padding:28px;
+}
+
+}
+
+@media(max-width:520px){
+
+.url-page{
+  padding:30px 14px;
+}
+
+.url-title{
+  font-size:28px;
+}
+
+.url-desc,
+.url-card p{
+  font-size:15px;
+}
+
+}
+
+.Url-step{
+
+  width:100%;
+  border-radius:18px;
+  margin-top:18px;
+  margin-bottom:18px;
+  box-shadow:
+  0 10px 25px rgba(0,0,0,0.08);
+  border:
+  1px solid rgba(0,0,0,0.06);
+}
+
+/* FOOTER */
+
+.site-footer{
+  margin-top:60px;
+
+  padding:35px 20px;
+
+  text-align:center;
+
+  background:
+  rgba(255,255,255,0.45);
+
+  backdrop-filter:blur(10px);
+
+  border-top:
+  1px solid rgba(0,0,0,0.06);
+}
+
+.lastline{
+  color:#475569;
+
+  margin-bottom:14px;
+
+  font-size:15px;
+}
+
+.links{
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:10px;
+
+  color:#64748b;
+}
+
+.links a{
+  text-decoration:none;
+
+  color:#475569;
+
+  font-size:14px;
+
+  transition:0.25s ease;
+}
+
+.links a:hover{
+  color:#7c3aed;
+}

@@ -1,0 +1,203 @@
+.about-page{
+  max-width:1000px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+.about-box{
+
+  background:
+  rgba(255,255,255,0.6);
+
+  backdrop-filter:blur(12px);
+
+  border-radius:24px;
+
+  padding:40px;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.06);
+}
+
+.about-tag{
+
+  display:inline-block;
+
+  padding:8px 16px;
+
+  border-radius:999px;
+
+  background:#ede9fe;
+
+  color:#7c3aed;
+
+  font-size:14px;
+
+  font-weight:700;
+
+  margin-bottom:20px;
+}
+
+.about-title{
+  font-size:42px;
+  margin-bottom:20px;
+  color:#0f172a;
+}
+
+.about-desc{
+  color:#475569;
+  line-height:1.8;
+  margin-bottom:35px;
+  font-size:17px;
+}
+
+.about-card{
+
+  background:
+  rgba(255,255,255,0.5);
+
+  border-radius:20px;
+
+  padding:28px;
+
+  margin-bottom:24px;
+}
+
+.about-card h2{
+  margin-bottom:14px;
+  color:#1e293b;
+}
+
+.about-card p{
+  color:#475569;
+  line-height:1.8;
+  margin-bottom:12px;
+}
+
+.about-card ul{
+  padding-left:20px;
+}
+
+.about-card li{
+  margin-bottom:12px;
+  color:#475569;
+  line-height:1.7;
+}
+
+.about-btn{
+
+  display:inline-block;
+
+  margin-top:10px;
+
+  background:
+  linear-gradient(
+  135deg,
+  #7c3aed,
+  #2563eb
+  );
+
+  color:white;
+
+  text-decoration:none;
+
+  padding:14px 24px;
+
+  border-radius:14px;
+
+  font-weight:600;
+
+  transition:0.25s ease;
+}
+
+.about-btn:hover{
+  transform:translateY(-2px);
+  opacity:0.95;
+}
+
+@media(max-width:768px){
+
+.about-title{
+  font-size:32px;
+}
+
+.about-box{
+  padding:28px;
+}
+
+}
+
+@media(max-width:520px){
+
+.about-page{
+  padding:30px 14px;
+}
+
+.about-title{
+  font-size:28px;
+}
+
+.about-desc,
+.about-card p,
+.about-card li{
+  font-size:15px;
+}
+
+.about-btn{
+  width:100%;
+  text-align:center;
+}
+
+}
+
+/* FOOTER */
+
+.site-footer{
+  margin-top:60px;
+
+  padding:35px 20px;
+
+  text-align:center;
+
+  background:
+  rgba(255,255,255,0.45);
+
+  backdrop-filter:blur(10px);
+
+  border-top:
+  1px solid rgba(0,0,0,0.06);
+}
+
+.lastline{
+  color:#475569;
+
+  margin-bottom:14px;
+
+  font-size:15px;
+}
+
+.links{
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:10px;
+
+  color:#64748b;
+}
+
+.links a{
+  text-decoration:none;
+
+  color:#475569;
+
+  font-size:14px;
+
+  transition:0.25s ease;
+}
+
+.links a:hover{
+  color:#7c3aed;
+}

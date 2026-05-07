@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2619529671451391"
+     crossorigin="anonymous"></script>
 <script type="application/ld+json">
 {
  "@context":"https://schema.org",
@@ -10,29 +12,27 @@
  "logo":"https://qify.site/images/logo.png"
 }
 </script>
+<link rel="canonical" href="https://qify.site/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<script defer src="https://unpkg.com/qr-code-styling/lib/qr-code-styling.js"></script>
+<script defer src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script defer src="script.js"></script>
+
 <meta property="og:title" content="QIFY - Free QR Code Generator">
 <meta property="og:description" content="Generate QR codes for UPI, WiFi, URLs and more.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://qify.site/">
 <meta property="og:image" content="https://qify.site/images/preview.png">
 <meta name="twitter:card" content="summary_large_image">
-<script src="https://unpkg.com/qr-code-styling/lib/qr-code-styling.js"></script>
-<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600&display=swap" rel="stylesheet">
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Qify – Free QR Code Generator</title>
 <meta name="description" content="Generate QR codes for UPI, WiFi, URLs and more. Fast & free QR generator.">
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PHWWFTG53Z"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -41,10 +41,24 @@
 
   gtag('config', 'G-PHWWFTG53Z');
 </script>
-<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<div id="privacyPopup" class="privacy-popup">
+  <div class="privacy-box">
+    <h2>Privacy Notice</h2>
+    <p>
+      QIFY uses cookies and local storage to improve your experience.
+      We do not store your QR data on servers.
+      By using this website, you agree to our Privacy Policy.
+    </p>
+
+    <div class="privacy-buttons">
+      <button id="acceptPrivacy">Accept</button>
+      <a href="pages/privacy-policy.html">Read Policy</a>
+    </div>
+  </div>
+</div>
 
 <header>
   <div class="logo">QIFY</div>
@@ -60,7 +74,9 @@
 <section class="hero">
   <h1 class="heading">Free QR Code Generator for URLs, UPI, WiFi & More</h1>
   <p class="para">
-    Create Dynamic qr code easily. you can create various qr code like 
+    Create QR codes instantly for URLs, UPI payments, WiFi passwords, 
+    contact details, emails, phone numbers and more. Generate secure QR 
+    codes directly in your browser for free. you can create various qr code like 
     URL, Text, Mobile Number, Email, Contact, WiFi Password and even UPI 
     to QR Code. you can create dynamic upi QR code By Amount, name and 
     UPI ID. you can scan that qr code using any app or Google Lens and 
@@ -68,9 +84,6 @@
   </p>
 </section>
 
-<div class="ads">Ad Space</div>
-
-<!-- QR TYPE BUTTONS -->
 <nav class="tabs">
 <button onclick="showForm('url')">URL</button>
 <button onclick="showForm('text')">Text</button>
@@ -80,7 +93,6 @@
 <button onclick="showForm('wifi')">WiFi</button>
 <button onclick="showForm('upi')">UPI</button>
 </nav>
-
 
 <section id="form-container">
 
@@ -165,10 +177,6 @@
 <span id="loadingText" style="display:none;">Downloading...</span>
 </section>
 
-
-
-<div class="ads">Ad Space</div>
-
 <section class="faq">
   <h2 class="headeri">Frequently Asked Questions</h2>
   <strong class="aalukalu">What is a QR Code?</strong>
@@ -178,18 +186,18 @@
      couldn't hold enough info for the auto parts they were tracking. To fix this, he created the QR (Quick Response) code.
     Unlike those old-school linear barcodes, QR codes are 2D grids of black and white squares. Think of them as a more 
     advanced language that can be read both horizontally and vertically.<br>
-    <h7>Massive Memory:</h7> They use four different encoding modes (numeric, alphanumeric, binary, and Kanji) to pack in way 
+    <span class="mini-heading">Massive Memory:</span> They use four different encoding modes (numeric, alphanumeric, binary, and Kanji) to pack in way 
     more data than a standard UPC.<br>
     Error Correction: Thanks to something called Reed–Solomon correction, a QR code can still work even if it’s a bit 
     scratched or dirty.<br>
-    <h7>Speed:</h7> Those three squares in the corners (fiducial markers) help your camera instantly figure out which way is up, 
+    <span class="mini-heading">Speed:</span> Those three squares in the corners (fiducial markers) help your camera instantly figure out which way is up, 
     making scanning nearly instant.
     What started as a tool for car factories has turned into a universal digital bridge. Today, we use them for everything 
     from tracking packages and managing documents to opening restaurant menus and following web links. It’s essentially a 
     high-speed shortcut between the physical world and your phone.
     </p>
 
-  <strong class="paraqw">What is a Dynamic UPI QR Code?</strong>
+  <strong>What is a Dynamic UPI QR Code?</strong>
 
   <p class="paraqw">Unlike a standard sticker, a dynamic UPI 
     QR code is generated specifically for one transaction. It 
@@ -197,7 +205,7 @@
     doesn't have to type the amount manually.
   </p>
 
-  <strong class="paraqw">What is the difference between Static and Dynamic QR codes?</strong>
+  <strong>What is the difference between Static and Dynamic QR codes?</strong>
 
   <p class="paraqw">Static QR codes have fixed information that cannot 
     be changed once printed. Dynamic QR codes use a redirect link, 
@@ -205,14 +213,14 @@
     reprinting the actual code.
   </p>
 
-  <strong class="paraqw">Do I need to enter my PIN to receive money?</strong>
+  <strong>Do I need to enter my PIN to receive money?</strong>
 
   <p class="paraqw">No. This is a common scam. You never need to scan 
     a QR code or enter your UPI PIN to receive money; these actions are 
     only for sending money.
   </p>
 
-   <strong class="paraqw">Data Privacy & Security</strong>
+   <strong>Data Privacy & Security</strong>
 
   <p class="paraqw">Your sensitive data, including UPI address, 
     bank account number, mobile number, or any other sensitive data is 
@@ -221,7 +229,7 @@
     browser’s local storage and is only used to generate the QR 
     code image. We take your privacy seriously.</p>
 
-  <strong class="paraqw">Important Disclaimer</strong>
+  <strong>Important Disclaimer</strong>
 
   <p class="paraqw">This app is designed to help user merchants 
     and businesses create any type QR codes with custom URLs, Text,
@@ -231,17 +239,12 @@
      India), or other financial institutions.
      The logos of Amazon Pay, PhonePe, Paytm, Google Pay, WhatsApp Pay,
      and BHIM UPI are trademarks of their respective owners and are
-     displayed for informational and educational purposes only.
-
-     Made with ❤️ for Users, shop Owner and Cybercafe owners
-
-
-
-
+     displayed for informational and educational purposes only.</p>
+    <br>
+    <p>
+     Made with ❤️ for Users, shop Owner and Cybercafe owners.
+    </p>
 </section>
-
-
-<div class="ads">Ad Space</div>
 
 
 <footer class="site-footer">
@@ -254,10 +257,7 @@
 <a href="pages/disclaimer.html">Disclaimer</a> |
 <a href="https://github.com/deep-mistry10/">GitHub</a> |
 <a href="https://www.reddit.com/user/Flat_Emotion7597/">Reddit</a>
-</footer>
 </div>
-<script defer src="https://unpkg.com/qr-code-styling/lib/qr-code-styling.js"></script>
-<script defer src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-<script defer src="script.js"></script>
+</footer>
 </body>
 </html>

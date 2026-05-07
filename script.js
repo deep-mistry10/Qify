@@ -241,12 +241,10 @@ async function downloadQR(){
       useCORS: true,
       backgroundColor: null
     }).then(canvas => {
-
       let link = document.createElement("a");
       link.download = "UPI_QR.png";
       link.href = canvas.toDataURL();
       link.click();
-
       btn.disabled = false;
       btn.innerText = "Download QR";
     });
@@ -264,13 +262,31 @@ async function downloadQR(){
       return;
     }
 
-
     let link = document.createElement("a");
     link.download = "QR.png";
     link.href = qrCanvas.toDataURL("image/png");
     link.click();
-
     btn.disabled = false;
     btn.innerText = "Download QR";
   }
 }
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const popup = document.getElementById("privacyPopup");
+  const acceptBtn = document.getElementById("acceptPrivacy");
+
+  if(localStorage.getItem("privacyAccepted")){
+    popup.style.display = "none";
+  }
+  acceptBtn.addEventListener("click", () => {
+    popup.style.opacity = "0";
+    setTimeout(() => {
+      popup.style.display = "none";
+    },300);
+    localStorage.setItem("privacyAccepted","true");
+  });
+
+});
