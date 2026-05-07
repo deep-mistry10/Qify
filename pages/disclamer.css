@@ -1,0 +1,151 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:linear-gradient(135deg, #dbe4f0, #edf2f7);
+  color:#1e293b;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  gap:40px;
+  padding:15px 30px;
+  background:rgba(255,255,255,0.55);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(0,0,0,0.06);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:bold;
+  color:#1e293b;
+}
+
+.navigator-bar nav{
+  display:flex;
+  gap:20px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#1e293b;
+  font-size:12px;
+  margin:0 6px;
+  transition:0.25s ease;
+}
+
+nav a:hover{
+  color:rgb(167,166,166);
+}
+
+/* PAGE */
+.disclaimer-page{
+  max-width:1100px;
+  margin:auto;
+  padding:70px 24px;
+}
+
+.disclaimer-card{
+  background:rgba(255,255,255,0.60);
+  backdrop-filter:blur(14px);
+  border-radius:28px;
+  padding:40px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}
+
+.heading{
+  font-size:14px;
+  letter-spacing:2px;
+  color:#7c3aed;
+  margin-bottom:18px;
+  font-weight:800;
+  text-align:center;
+}
+
+.disclaimer-title{
+  font-size:58px;
+  line-height:1.1;
+  color:#0f172a;
+  margin-bottom:22px;
+  text-align:center;
+}
+
+.disclaimer-desc{
+  max-width:850px;
+  margin:auto;
+  color:#475569;
+  line-height:1.9;
+  font-size:19px;
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.disclaimer-content{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:20px;
+}
+
+.disclaimer-box{
+  background:rgba(255,255,255,0.6);
+  border-radius:22px;
+  padding:28px;
+  box-shadow:0 8px 22px rgba(0,0,0,0.05);
+}
+
+.disclaimer-box h2{
+  font-size:28px;
+  color:#0f172a;
+  margin-bottom:12px;
+}
+
+.disclaimer-box p{
+  color:#475569;
+  line-height:1.9;
+  font-size:16px;
+}
+
+/* FOOTER */
+.site-footer{
+  margin-top:60px;
+  padding:35px 20px;
+  text-align:center;
+  background:rgba(255,255,255,0.45);
+  backdrop-filter:blur(10px);
+  border-top:1px solid rgba(0,0,0,0.06);
+}
+
+.lastline{
+  color:#475569;
+  margin-bottom:14px;
+  font-size:15px;
+}
+
+.links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  color:#64748b;
+}
+
+.links a{
+  text-decoration:none;
+  color:#475569;
+  font-size:14px;
+  transition:0.25s ease;
+}
+
+.links a:hover{
+  color:#7c3aed;
+}
