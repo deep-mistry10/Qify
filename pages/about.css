@@ -8,13 +8,9 @@
 
   background:
   rgba(255,255,255,0.6);
-
   backdrop-filter:blur(12px);
-
   border-radius:24px;
-
   padding:40px;
-
   box-shadow:
   0 10px 30px rgba(0,0,0,0.06);
 }
@@ -22,19 +18,12 @@
 .about-tag{
 
   display:inline-block;
-
   padding:8px 16px;
-
   border-radius:999px;
-
   background:#ede9fe;
-
   color:#7c3aed;
-
   font-size:14px;
-
   font-weight:700;
-
   margin-bottom:20px;
 }
 
@@ -55,11 +44,8 @@
 
   background:
   rgba(255,255,255,0.5);
-
   border-radius:20px;
-
   padding:28px;
-
   margin-bottom:24px;
 }
 
