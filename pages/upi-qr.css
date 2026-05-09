@@ -5,36 +5,23 @@
 }
 
 .upi-box{
-
   background:
   rgba(255,255,255,0.6);
-
   backdrop-filter:blur(12px);
-
   border-radius:24px;
-
   padding:40px;
-
   box-shadow:
   0 10px 30px rgba(0,0,0,0.06);
 }
 
 .upi-tag{
-
   display:inline-block;
-
   padding:8px 16px;
-
   border-radius:999px;
-
   background:#ede9fe;
-
   color:#7c3aed;
-
   font-size:14px;
-
   font-weight:700;
-
   margin-bottom:20px;
 }
 
@@ -52,14 +39,10 @@
 }
 
 .upi-card{
-
   background:
   rgba(255,255,255,0.5);
-
   border-radius:20px;
-
   padding:28px;
-
   margin-bottom:24px;
 }
 
@@ -82,9 +65,7 @@
 .upi-image{
   width:100%;
   max-width:420px;
-
   border-radius:24px;
-
   box-shadow:
   0 10px 30px rgba(0,0,0,0.1);
 }
@@ -129,51 +110,35 @@
   1px solid rgba(0,0,0,0.06);
 }
 
-/* FOOTER */
-
 .site-footer{
   margin-top:60px;
-
   padding:35px 20px;
-
   text-align:center;
-
   background:
   rgba(255,255,255,0.45);
-
   backdrop-filter:blur(10px);
-
   border-top:
   1px solid rgba(0,0,0,0.06);
 }
 
 .lastline{
   color:#475569;
-
   margin-bottom:14px;
-
   font-size:15px;
 }
 
 .links{
   display:flex;
-
   justify-content:center;
-
   flex-wrap:wrap;
-
   gap:10px;
-
   color:#64748b;
 }
 
 .links a{
   text-decoration:none;
-
   color:#475569;
-
   font-size:14px;
-
   transition:0.25s ease;
 }
 

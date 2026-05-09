@@ -71,28 +71,19 @@
 }
 
 .about-btn{
-
   display:inline-block;
-
   margin-top:10px;
-
   background:
   linear-gradient(
   135deg,
   #7c3aed,
   #2563eb
   );
-
   color:white;
-
   text-decoration:none;
-
   padding:14px 24px;
-
   border-radius:14px;
-
   font-weight:600;
-
   transition:0.25s ease;
 }
 
@@ -136,51 +127,35 @@
 
 }
 
-/* FOOTER */
-
 .site-footer{
   margin-top:60px;
-
   padding:35px 20px;
-
   text-align:center;
-
   background:
   rgba(255,255,255,0.45);
-
   backdrop-filter:blur(10px);
-
   border-top:
   1px solid rgba(0,0,0,0.06);
 }
 
 .lastline{
   color:#475569;
-
   margin-bottom:14px;
-
   font-size:15px;
 }
 
 .links{
   display:flex;
-
   justify-content:center;
-
   flex-wrap:wrap;
-
   gap:10px;
-
   color:#64748b;
 }
 
 .links a{
   text-decoration:none;
-
   color:#475569;
-
   font-size:14px;
-
   transition:0.25s ease;
 }
 

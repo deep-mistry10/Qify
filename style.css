@@ -12,6 +12,9 @@ body {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+}
 
 header {
   display: flex;
@@ -103,47 +106,33 @@ nav a:hover {
 
 .site-footer{
   margin-top:60px;
-
   padding:35px 20px;
-
   text-align:center;
-
   background:
   rgba(255,255,255,0.45);
-
   backdrop-filter:blur(10px);
-
   border-top:
   1px solid rgba(0,0,0,0.06);
 }
 
 .lastline{
   color:#475569;
-
   margin-bottom:14px;
-
   font-size:15px;
 }
 
 .links{
   display:flex;
-
   justify-content:center;
-
   flex-wrap:wrap;
-
   gap:10px;
-
   color:#64748b;
 }
 
 .links a{
   text-decoration:none;
-
   color:#475569;
-
   font-size:14px;
-
   transition:0.25s ease;
 }
 
@@ -420,20 +409,15 @@ strong{
 .card{
   width:min(340px,92vw);
   background:white;
-
   border-radius:24px;
   overflow:hidden;
-
   margin:25px auto;
   padding-bottom:30px;
-
   display:flex;
   flex-direction:column;
   align-items:center;
-
   box-shadow:
   0 10px 30px rgba(0,0,0,0.08);
-
   backdrop-filter:blur(12px);
 }
 #qr canvas {
@@ -443,24 +427,18 @@ strong{
 .header{
   width:100%;
   padding:20px;
-
   font-size:22px;
   font-weight:700;
-
   color:#374151;
-
   background:
   linear-gradient(to bottom,#dbe3ee,#edf2f7);
 }
 
 .message{
   margin-top:22px;
-
   color:#6b7280;
-
   font-size:13px;
   text-align:center;
-
   padding:0 20px;
 }
 
