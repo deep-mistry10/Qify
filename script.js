@@ -56,7 +56,13 @@ try {
   if (domainRegex.test(host) || ipRegex.test(host) || isLocalhost) {
     error.style.display = "none";
     input.classList.remove("invalid");
-    qrData = url;
+    const q = parsed.searchParams.get("q");
+
+if(parsed.hostname.includes("google.com") && q){
+  qrData = `https://www.google.com/search?q=${encodeURIComponent(q)}`;
+}else{
+  qrData = url;
+}
   } else {
     throw new Error("Invalid host");
   }
@@ -189,9 +195,19 @@ color:"#ffffff"
 let tempDiv=document.createElement("div")
 qrCode.append(tempDiv)
 
-await new Promise(r=>setTimeout(r,500))
+let qrCanvas = null;
+let tries = 0;
 
-let qrCanvas=tempDiv.querySelector("canvas")
+while (!qrCanvas && tries < 40) {
+  await new Promise(r => setTimeout(r, 50));
+  qrCanvas = tempDiv.querySelector("canvas");
+  tries++;
+}
+
+if (!qrCanvas) {
+  alert("QR could not be generated.");
+  return;
+}
 
 let padding=20
 

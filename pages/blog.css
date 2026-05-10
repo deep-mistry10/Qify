@@ -1,4 +1,7 @@
-/* BLOG PAGE */
+html{
+  scroll-behavior:smooth;
+}
+
 .blog-page{
   max-width:1000px;
   margin:auto;
@@ -20,7 +23,6 @@
   line-height:1.8;
 }
 
-/* HERO */
 .hero{
   padding:40px 20px;
   margin-top:60px;
@@ -113,7 +115,6 @@
   transform:translateY(-2px);
 }
 
-/* SIDE CARDS */
 .hero-side{
   display:grid;
   gap:20px;
@@ -170,7 +171,6 @@
   font-size:14px;
 }
 
-/* MAIN WRAP */
 .container{
   max-width:1200px;
   margin:auto;
@@ -200,7 +200,7 @@
   line-height:1.8;
 }
 
-/* FEATURE GRID */
+
 .feature-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -254,7 +254,6 @@
   font-weight:700;
 }
 
-/* CATEGORY BUTTONS */
 .categories{
   display:flex;
   gap:10px;
@@ -282,7 +281,6 @@
   color:#fff;
 }
 
-/* BLOG GRID */
 .blog-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -347,7 +345,7 @@
   color:#6366f1;
 }
 
-/* NEWSLETTER */
+
 .newsletter{
   margin-top:28px;
   padding:32px;
@@ -402,7 +400,7 @@
   box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* RESPONSIVE */
+
 @media(max-width:1024px){
   .hero-wrapper{
     grid-template-columns:1fr;
