@@ -1,5 +1,10 @@
 User-agent: *
-Content-Signal: search=yes,ai-train=no
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Mediapartners-Google
 Allow: /
 
 Sitemap: https://qify.site/sitemap.xml
