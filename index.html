@@ -41,6 +41,19 @@
 
   gtag('config', 'G-PHWWFTG53Z');
 </script>
+<script>
+window.addEventListener('load', () => {
+  const pages = ['/pages/about.html', '/pages/contact.html', '/pages/terms.html'];
+  setTimeout(() => {
+    pages.forEach(href => {
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = href;
+      document.head.appendChild(link);
+    });
+  }, 3000);
+});
+</script>
 </head>
 
 <body>
@@ -164,8 +177,8 @@
   <div class="desc">Scan and pay with any BHIM UPI app</div>
 
   <div class="logos-big">
-    <img src="/images/BHIM.svg" alt="BHIM logo">
-    <img src="/images/UPI.svg" alt="UPI logo">
+    <img src="/images/BHIM.svg" loading="lazy" alt="BHIM logo">
+    <img src="/images/UPI.svg" loading="lazy" alt="UPI logo">
   </div>
 
   <div class="logos-small">
